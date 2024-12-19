@@ -28,7 +28,7 @@ This is a **Retrieval-Augmented Generation (RAG)** application built using **Fas
     cd rag-app
     ```
 
-2. **Set up a virtual environment (optional but recommended)**:
+2. **Set up a virtual environment **:
 
     ```bash
     python3 -m venv venv
