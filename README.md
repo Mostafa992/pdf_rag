@@ -84,5 +84,17 @@ This is a **Retrieval-Augmented Generation (RAG)** application built using **Fas
    - Once the PDF is uploaded and indexed, enter your query in the input field under "Query the PDF".
    - The app will process your query and return relevant information from the PDF.
 
-## Directory Structure
+
+## Technologies Used
+
+- **FastAPI**: A modern, fast (high-performance) web framework for building APIs with Python.
+- **LangChain**: A framework for building applications with LLMs (Large Language Models).
+- **Chroma**: A vector store for efficient storage and retrieval of document embeddings.
+- **OpenAI GPT-3.5**: A conversational model used for answering queries.
+
+## License
+
+This project is licensed under the MIT License.
+
+
 
