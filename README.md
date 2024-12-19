@@ -85,11 +85,4 @@ This is a **Retrieval-Augmented Generation (RAG)** application built using **Fas
    - The app will process your query and return relevant information from the PDF.
 
 
-## Technologies Used
-
-- **FastAPI**: A modern, fast (high-performance) web framework for building APIs with Python.
-- **LangChain**: A framework for building applications with LLMs (Large Language Models).
-- **Chroma**: A vector store for efficient storage and retrieval of document embeddings.
-- **OpenAI GPT-3.5**: A conversational model used for answering queries.
-
 
