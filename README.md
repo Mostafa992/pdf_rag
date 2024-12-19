@@ -92,9 +92,4 @@ This is a **Retrieval-Augmented Generation (RAG)** application built using **Fas
 - **Chroma**: A vector store for efficient storage and retrieval of document embeddings.
 - **OpenAI GPT-3.5**: A conversational model used for answering queries.
 
-## License
-
-This project is licensed under the MIT License.
-
-
 
