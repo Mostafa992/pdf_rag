@@ -15,6 +15,11 @@ vectorstore = None
 
 @app.get("/", response_class=HTMLResponse)
 def home():
+    """
+    Serves the home page of the application with an HTML interface for uploading PDFs and querying them.
+    - Provides forms for users to upload a PDF or input a query.
+    - Includes JavaScript for handling file uploads and query submissions asynchronously.
+    """
     html_content = """
     <!DOCTYPE html>
     <html lang="en">
@@ -78,6 +83,15 @@ def home():
 
 @app.post("/upload")
 async def upload_pdf(file: UploadFile = File(...)):
+
+    """
+    Handles the upload and processing of a PDF file.
+    - Validates the file type to ensure it is a PDF.
+    - Saves the uploaded file temporarily and processes it into chunks.
+    - Initializes a Chroma vector store and indexes the chunks for querying.
+    - Cleans up the temporary file after processing.
+    - Returns a success message upon successful upload and indexing.
+    """
     global vectorstore
 
     # Check if the file is a PDF
@@ -110,6 +124,13 @@ async def upload_pdf(file: UploadFile = File(...)):
         raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")
 @app.post("/query")
 async def query_vectorstore(query: str = Form(...)):
+        """
+    Handles user queries against the indexed PDF content.
+    - Checks if a PDF has been uploaded and indexed before querying.
+    - Initializes a conversational retrieval chain with a language model and the Chroma retriever.
+    - Processes the query, retrieves the most relevant content, and generates a response.
+    - Returns the answer and metadata about the source documents.
+    """
     global vectorstore
 
     # Check if the vector store is initialized
